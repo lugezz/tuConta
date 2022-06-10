@@ -1,0 +1,12 @@
+* Permisos por usuario, empresas y tipo de usuario en tooodo
+
+* Vencimientos no mensuales
+* Facturación
+* Archivos con Google Drive
+* Limpiar Font Awesome no usados
+* Datatables?
+* Jquery y Ajax?
+* Agregar número DGR
+
+
+

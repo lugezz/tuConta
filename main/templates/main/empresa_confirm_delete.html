@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block body %}
+<h1>Borrar Vencimiento</h1>
+
+<p>¿Estás seguro de borrar el cliente <b>{{ empresa }}</b>?</p>
+<p>En caso de avanzar se borrarán todos los registros relacionados</p>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-secondary btn-flat">
+      <i class="fas fa-eraser"></i> Si! borrar.
+  </button>
+    <a href="{% url 'empresas_list' %}" class="btn btn-danger btn-flat">
+        <i class="fas fa-times"></i> Cancelar
+    </a>
+</form>
+{% endblock %}

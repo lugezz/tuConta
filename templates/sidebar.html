@@ -1,0 +1,67 @@
+{% load static %}
+<aside class="main-sidebar sidebar-light-primary elevation-4">
+    <a href="{% url 'main' %}" class="brand-link">
+        <img src="{% static 'img/logo.png' %}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">tu<b>Conta</b></span>
+    </a>
+    <div class="sidebar">
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="info">
+                <a href="{% url 'main' %}" class="d-block">Estudio Contable</a>
+            </div>
+        </div>
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-item">
+                    <a href="{% url 'empresas_list' %}" class="nav-link">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>
+                            Clientes
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-folder"></i>
+                        <p>
+                            Archivos
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-file-invoice"></i>
+                        <p>
+                            Facturación
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-header">Vencimientos</li>
+                <li class="nav-item">
+                    <a href="{% url 'vencimientos:generate' %}" class="nav-link">
+                        <i class="nav-icon fas fa-magic"></i>
+                        <p>
+                            Generación
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'vencimientos:vi_list' %}" class="nav-link">
+                        <i class="nav-icon fas fa-sticky-note"></i>
+                        <p>
+                            Por Impuesto
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'vencimientos:ve_list' %}" class="nav-link">
+                        <i class="nav-icon fas fa-calendar-check"></i>
+                        <p>
+                            Por Cliente
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</aside>

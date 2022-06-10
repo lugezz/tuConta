@@ -1,0 +1,30 @@
+{% extends 'list.html' %} {% load static %} {% block columns %}
+<tr>
+    <th scope="col" style="width: 25%;">Razón Social</th>
+    <th scope="col" style="width: 15%;">CUIT</th>
+    <th scope="col" style="width: 30%;">Dirección</th>
+    <th scope="col" style="width: 10%;">Cierre</th>
+    <th scope="col" style="width: 20%;">Opciones</th>
+</tr>
+{% endblock %} {% block rows %} {% for obj in object_list %}
+<tr>
+    <td>{{ obj.nombre }}</td>
+    <td>{{ obj.cuit }}</td>
+    <td>
+        {% if obj.direccion %} 
+            {{ obj.direccion }}
+        {% else %}
+            S/D
+        {% endif %}
+    </td>
+    <td>{{ obj.mes_cierre }}</td>
+    <td class="text-center">
+        <a href="{% url 'empresa_update' obj.id %}" class="btn btn-warning btn-xs btn-flat">
+            <i class="fas fa-edit"></i>
+        </a>
+        <a href="{% url 'empresa_delete' obj.id %}" class="btn btn-danger btn-xs btn-flat">
+            <i class="fas fa-trash"></i>
+        </a>
+    </td>
+</tr>
+{% endfor %} {% endblock %}
